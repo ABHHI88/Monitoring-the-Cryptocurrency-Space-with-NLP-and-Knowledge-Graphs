@@ -122,8 +122,7 @@ REASULT
 
 
 The sentiment is on average positive, but it heavily fluctuates between articles based on the standard deviation values. We could explore bitcoin sentiment more. Instead, we will examine which persons have the highest and lowest average sentiment in and also present in most articles in North America.
-![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/983ff315-fbf1-4ec3-8b26-972a14826a5e)
-\
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/983ff315-fbf1-4ec3-8b26-972a14826a5e)\
 RESULT
 
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/6d19453a-3b96-4515-8f35-f27bc2790599)
