@@ -26,3 +26,23 @@ This process helps in efficiently gathering and analyzing information about cypt
    We're going to use Diffbot's APIs to get articles discussing cryptocurrencies. If you want to try this yourself, sign up for a free trial on their website. Once you're logged in, you can use their visual query builder to see what's available. This code will fetch up to 5000 recent articles tagged with "cryptocurrency". It does this in batches of 50 articles each to make it more efficient. This way, you can gather a lot of useful data for analysis or whatever you need.
 
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/4f60f590-ee1b-4695-a56a-4a82914b36ad)
+There is a lot of data available by Diffbot’s Knowledge Graph API. So not only can you search for various articles, but you could use their KG APIs to retrieve information around organizations, products, persons, jobs, and more.
+
+This example will retrieve the latest 5000 articles with a tag label Cryptocurrency.
+
+DIFF_TOKEN = "<Insert your Diffbot token>"
+search_query = 'query=type%3AArticle+tags.label%3A"cryptocurrency"++sortBy%3Adate'
+article_count = 5000
+articles_per_request = 50
+
+def get_articles(query, offset):
+    """
+    Fetch relevant articles from Diffbot KG endpoint
+    """
+    search_host = "https://kg.diffbot.com/kg/dql_endpoint?"
+    url = f"{search_host}{query}&token={DIFF_TOKEN}&from={offset}&size={articles_per_request}"
+    return requests.get(url).json()['data']
+
+articles = []
+for offset in range(0,article_count, articles_per_request):
+    articles.extend(get_articles(search_query, offset))
