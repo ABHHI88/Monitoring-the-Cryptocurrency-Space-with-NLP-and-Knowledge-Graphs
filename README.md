@@ -38,4 +38,36 @@ This example will retrieve the latest 5000 articles with a tag label Cryptocurre
 
 3. BRING/IMPORT ARTICLES INTO Neo4j:
     I recommend either downloading Neo4j Desktop or using the free Neo4j AuraDB cloud instance. This will help us store information about the 5000 articles. First, we need to set up the connection to the Neo4j instance.
+   ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/34432f1b-3b87-40c4-a173-ae66e67ecf57)
+   
+The imported graph model will have the following schema.
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/f1b7328d-0165-4082-859a-5ec315d4cea7)
+
+We have some extra information about the articles. For instance, we know the general feeling of the article and when it was published. Also, for many articles, we know the author and the website it's from. Additionally, the Diffbot API provides categories for each article.
+
+Before we move forward, we'll set up unique rules in Neo4j. This will help speed up the import process and make future searches faster.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/42a45500-cc5e-454e-ba8a-a68989175367)
+Now we can go ahead and import articles into Neo4j.
+vbvgte![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/bb439b17-db83-4a2e-95b8-7b2a1e509915)
+
+I won't explain the above Cypher query in detail here. Instead, you can find multiple blog posts that introduce Cypher and cover graph imports if you're interested. There's also a GraphAcademy course about importing data that covers the basics.
+
+We can examine a single to blog post to verify the graph schema model
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/cca9be1b-12ef-4413-9a09-dfe9cfc9885c)
+Before we delve into analyzing the data, we'll utilize the NLP API to extract entities and relationships, known as "facts" in Diffbot's terminology.
+
+o process the entities in the response and store the to Neo4j, we will use the following code:
+
+You can try out Diffbot's online NLP demo on their website. Simply input any text, and it will show you the extracted entities and relationships. I've already input a sample content of an article we just imported into Neo4j, and we'll use the results for further analysis.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/750e7e0b-9e7e-405e-b2ba-8c401ad9240a)
+
+The NLP API will find all the important things mentioned in the text and how they're connected. For instance, it might show that Jack Dorsey is the CEO of Block, a company located in San Francisco. Block deals with payments and mining. Another person mentioned is Thomas Templeton, who works with Jack at Block and has experience in computer hardware.
+
+
+
+
+
+
 
