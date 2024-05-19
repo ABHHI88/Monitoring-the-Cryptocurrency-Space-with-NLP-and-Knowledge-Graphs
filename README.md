@@ -127,6 +127,72 @@ RESULT
 
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/6d19453a-3b96-4515-8f35-f27bc2790599)
 
+Now, we can explore the titles of articles in which, for example, Mark Cuban appears.
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/26096c70-4e46-4bbf-9594-8c997bc6a3c7)
+
+While the titles themselves might not the most descriptive, we can also examine which other entities frequently co-occur in articles where Mark Cuban is mentioned.
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/0bffc188-58e0-4171-af22-b087497f79a2)
+
+RESULT
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/d6cc8162-3c41-4a31-87ba-f4196b6495c2)
+
+Not surprisingly, various crypto tokens are present. Also, the Dallas Mavericks appear, which is the NBA club that Mark owns. Does Dallas Mavericks support crypto, or do reporters like to state that Mark owns the Dallas Mavericks, that I don’t know. You could proceed with that route of analysis, but here, we’ll also look at what facts we extracted during NLP processing.
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/5dfbde3a-bfe3-4051-bc05-d6785dcf0e7c)
+
+RESULT
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/59b8e6b0-6c56-433d-9c49-26b7cc81038d)
+
+Next, we will quickly evaluate the article titles where Floyd Mayweather appears, as the average sentiment is quite low.
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/59e72d90-813b-47d3-82ef-e974d71ebb00)
+
+RESULT
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/e69190f3-1a20-49c4-854c-0e083bf4eb69
+
+It seems that Kim Kardashian and Floyd Mayweather are being sued over an alleged crypto scam. The NLP processing also identifies various tokens and stock tickers, so we can analyze which are popular at the moment and their sentiment.
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/e6be5ee5-7681-4a88-b831-73b98d215836)
+
+RESULT
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/52457f6d-85e0-4f6a-a351-bdb5a590149d)
+
+I have only scratched the surface of the available insights we could extract. For the end, I’ll just add two visualizations and mention some applications you could develop.
+
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/6626f4f8-7809-4ccf-8573-964dd7fc2d0f)
+
+For example, you could analyze the market by looking at relationships like COMPETITORS, ACQUIRED_BY, SUPPLIERS, etc. On the other hand, you could focus your analysis more on the persons in the graph and evaluate their influence or connections.
+
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/f6ee2515-b74b-4427-aabc-a4b61219054f)\
+
+CONCLUSION
+I've only just started exploring what we can do with this data pipeline. As I mentioned, you could keep an eye on news about your company, your competitors, or the entire industry. You could even try predicting future events, like company acquisitions. And don't forget, you could use the extracted data to power machine learning models for things like predicting crypto trends. There's a lot of possibilities!
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
