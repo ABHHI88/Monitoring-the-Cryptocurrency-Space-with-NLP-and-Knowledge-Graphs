@@ -83,13 +83,27 @@ This is just a small chunk of the overall picture. There's so much info availabl
 
 ANALYZE OF GRAPH
 In the final part of this post, I'll show you some example ways you could use a knowledge graph like this. First up, we'll check out the timeline of the articles
+
+
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/9f6096b2-026f-41b3-b975-c319282c89ac)
+
+
 RESULT
+
+
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/247c98e7-d917-4b5d-99e5-2d0313e0a6fb)
+
+
 There is between 150 to 450 articles per day about cryptocurrencies around the world which backs my initial statement about that volume being too much to read. Next, we will evaluate which entities are most frequently mentioned in articles.
+
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/e921509f-1b1b-45d8-bb74-9cf5495a4b4c)
+
+
 RESULT
+
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/82d32df5-2927-4fed-86a2-e465591d9a02)
+
+
 As you would expect from articles revolving around cryptocurrencies, the most frequently mentioned entities are:
 
 cryptocurrency
@@ -97,12 +111,21 @@ bitcoin
 Ethereum and
 blockchain
 The sentiment is available on the article level as well as entity level. For example, we can examine the sentiment regarding bitcoin grouped by region.
+
+
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/656afd08-95a4-42fb-9082-6ce045a0e764)
+
+
 REASULT
+
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/6a81c031-7d4d-41ff-be30-cddafdaa4dde)
+
+
 The sentiment is on average positive, but it heavily fluctuates between articles based on the standard deviation values. We could explore bitcoin sentiment more. Instead, we will examine which persons have the highest and lowest average sentiment in and also present in most articles in North America.
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/983ff315-fbf1-4ec3-8b26-972a14826a5e)
+\
 RESULT
+
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/6d19453a-3b96-4515-8f35-f27bc2790599)
 
 
