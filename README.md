@@ -25,5 +25,4 @@ This process helps in efficiently gathering and analyzing information about cypt
 1. FINDING CRYPTOCURRENCY ARTICLES:
    We're going to use Diffbot's APIs to get articles discussing cryptocurrencies. If you want to try this yourself, sign up for a free trial on their website. Once you're logged in, you can use their visual query builder to see what's available. This code will fetch up to 5000 recent articles tagged with "cryptocurrency". It does this in batches of 50 articles each to make it more efficient. This way, you can gather a lot of useful data for analysis or whatever you need.
 
-![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/2d079527-e5bf-4e09-b8f2-42a4ccdea3ca)
-
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/4f60f590-ee1b-4695-a56a-4a82914b36ad)
