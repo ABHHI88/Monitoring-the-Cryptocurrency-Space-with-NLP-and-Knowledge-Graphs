@@ -64,6 +64,61 @@ You can try out Diffbot's online NLP demo on their website. Simply input any tex
 ![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/750e7e0b-9e7e-405e-b2ba-8c401ad9240a)
 
 The NLP API will find all the important things mentioned in the text and how they're connected. For instance, it might show that Jack Dorsey is the CEO of Block, a company located in San Francisco. Block deals with payments and mining. Another person mentioned is Thomas Templeton, who works with Jack at Block and has experience in computer hardware.
+To process the entities in the response and store the to Neo4j, we will use the following code:
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/bbba37f0-d7a8-4542-b4b1-1f2019119db9)
+This example will import only entities that have allowed types such as organization, person, product, and location, and their confidence level is greater than 0.7. Diffbot’s NLP API also features entity linking, where entities are linked to Wikipedia, Crunchbase, or LinkedIn, as far as I have seen. We also add the extra entity types as additional labels to the Entity node.
+
+Next, we have to prepare the function that will clean and import relationships into Neo4j.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/b3c5df0d-fc04-48c5-885e-af28b7888263)
+I've left out certain details from being imported. These details are listed in the skipProperties list. Instead of treating them as relationships between things, I think it's better to store them as properties of the things themselves. However, for now, we're just going to ignore these details during the import process.
+
+Now that we've got the functions ready to import entities and relationships, we're ready to start working on the articles. You can send multiple articles at once. I've decided to group them in batches of 50 articles per request to make things easier to manage.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/48470954-5387-4fbc-9fe4-749a055a7e16)
+By following these steps you have successfully constructed a knowledge graph in Neo4j. For example, we can visualize the neighborhood of Jack Dorsey.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/8a8866c2-fd65-4e47-9a3e-1bf229c68f85)
+The NLP tool picked up that Jack Dorsey is the CEO of Block and has connections with Alex Morcos, Martin White, etc. But not all the info it extracted is accurate.
+
+There's a funny error where it identified Elon Musk as an employee of Dogecoin, which isn't too far from the truth in a way. I haven't adjusted the confidence levels for facts yet, but you could raise the threshold to cut down on the mistakes. However, it's a trade-off between getting everything right and not missing anything.
+This is just a small chunk of the overall picture. There's so much info available that it's tough to decide what to show.
+
+ANALYZE OF GRAPH
+In the final part of this post, I'll show you some example ways you could use a knowledge graph like this. First up, we'll check out the timeline of the articles
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/9f6096b2-026f-41b3-b975-c319282c89ac)
+RESULT
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/247c98e7-d917-4b5d-99e5-2d0313e0a6fb)
+There is between 150 to 450 articles per day about cryptocurrencies around the world which backs my initial statement about that volume being too much to read. Next, we will evaluate which entities are most frequently mentioned in articles.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/e921509f-1b1b-45d8-bb74-9cf5495a4b4c)
+RESULT
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/82d32df5-2927-4fed-86a2-e465591d9a02)
+As you would expect from articles revolving around cryptocurrencies, the most frequently mentioned entities are:
+
+cryptocurrency
+bitcoin
+Ethereum and
+blockchain
+The sentiment is available on the article level as well as entity level. For example, we can examine the sentiment regarding bitcoin grouped by region.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/656afd08-95a4-42fb-9082-6ce045a0e764)
+REASULT
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/6a81c031-7d4d-41ff-be30-cddafdaa4dde)
+The sentiment is on average positive, but it heavily fluctuates between articles based on the standard deviation values. We could explore bitcoin sentiment more. Instead, we will examine which persons have the highest and lowest average sentiment in and also present in most articles in North America.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/983ff315-fbf1-4ec3-8b26-972a14826a5e)
+RESULT
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/6d19453a-3b96-4515-8f35-f27bc2790599)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
