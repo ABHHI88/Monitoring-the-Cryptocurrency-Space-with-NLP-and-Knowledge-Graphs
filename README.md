@@ -30,19 +30,12 @@ There is a lot of data available by Diffbot’s Knowledge Graph API. So not only
 
 This example will retrieve the latest 5000 articles with a tag label Cryptocurrency.
 
-DIFF_TOKEN = "<Insert your Diffbot token>"
-search_query = 'query=type%3AArticle+tags.label%3A"cryptocurrency"++sortBy%3Adate'
-article_count = 5000
-articles_per_request = 50
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/fa4b93f9-f9b9-4a4d-8b89-340b388a57d7)
 
-def get_articles(query, offset):
-    """
-    Fetch relevant articles from Diffbot KG endpoint
-    """
-    search_host = "https://kg.diffbot.com/kg/dql_endpoint?"
-    url = f"{search_host}{query}&token={DIFF_TOKEN}&from={offset}&size={articles_per_request}"
-    return requests.get(url).json()['data']
+2. TRANSLATE THE FOREGIN ARTICLES:
+   The articles we got are from all over the world and in different languages. Next, we'll use the Google Translate API to translate them into English. To do this, you'll need to activate the Google Translate API and generate an API key.
+![image](https://github.com/ABHHI88/Monitoring-the-Cryptocurrency-Space-with-NLP-and-Knowledge-Graphs/assets/116937921/f09cecc5-8e26-4341-aaf7-2df61a6eb472)
 
-articles = []
-for offset in range(0,article_count, articles_per_request):
-    articles.extend(get_articles(search_query, offset))
+3. BRING/IMPORT ARTICLES INTO Neo4j:
+    I recommend either downloading Neo4j Desktop or using the free Neo4j AuraDB cloud instance. This will help us store information about the 5000 articles. First, we need to set up the connection to the Neo4j instance.
+
